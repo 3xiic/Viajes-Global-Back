@@ -12,13 +12,17 @@ import lombok.Setter;
 public class NotificationChoiceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cliente")
     private int id_client;
     private boolean choice_push;
     private boolean choice_sms;
     private boolean choice_email;
     @JsonBackReference
-    @OneToOne(mappedBy = "notificationChoiceEntity")
+    @OneToOne
+    @JoinColumn(name = "id_client", referencedColumnName = "id_cliente")
     private ClientEntity clientEntity;
+
+
 
     public NotificationChoiceEntity() {
 

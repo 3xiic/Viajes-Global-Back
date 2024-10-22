@@ -11,7 +11,6 @@ public class NotificationChoiceDTO {
     private boolean choice_push;
     private boolean choice_sms;
     private boolean choice_email;
-    @JsonBackReference
     private ClientEntity clientEntity;
 
     public NotificationChoiceDTO() {

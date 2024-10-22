@@ -16,18 +16,20 @@ public class ClientEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cliente")
     private int id_client;
     private String email;
+    @Column(name = "username")
     private String user;
     private String telephone;
     private String password;
     @JsonManagedReference
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "clientEntity", cascade = CascadeType.ALL)
     private Set<BookingEntity> bookingEntities;
-    @JsonManagedReference
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
+    @OneToOne(mappedBy = "clientEntity", cascade = CascadeType.ALL)
     private NotificationChoiceEntity notificationChoiceEntity;
+
+
     public ClientEntity() {
 
     }

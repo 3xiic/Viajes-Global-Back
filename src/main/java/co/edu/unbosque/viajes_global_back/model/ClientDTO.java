@@ -19,7 +19,6 @@ public class ClientDTO {
     private String password;
     @JsonManagedReference
     private Set<BookingEntity> bookingEntities;
-    @JsonManagedReference
     private NotificationChoiceEntity notificationChoiceEntity;
     public ClientDTO() {
 

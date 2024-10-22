@@ -19,10 +19,8 @@ public class BookingEntity {
     private int id_booking;
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_client", referencedColumnName = "id_client")
+    @JoinColumn(name = "id_client")
     private ClientEntity clientEntity;
-    private int id_client;
-    private int id_package;
     private Date booking_date;
     private String booking_status;
     private String name;
@@ -42,11 +40,9 @@ public class BookingEntity {
 
     }
 
-    public BookingEntity(int id_booking, ClientEntity clientEntity, int id_client, int id_package, Date booking_date, String booking_status, String name, String email, String telephone, PackageEntity packageEntity, BookingDetailEntity bookingDetailEntity) {
+    public BookingEntity(int id_booking, ClientEntity clientEntity, Date booking_date, String booking_status, String name, String email, String telephone, PackageEntity packageEntity, BookingDetailEntity bookingDetailEntity) {
         this.id_booking = id_booking;
         this.clientEntity = clientEntity;
-        this.id_client = id_client;
-        this.id_package = id_package;
         this.booking_date = booking_date;
         this.booking_status = booking_status;
         this.name = name;

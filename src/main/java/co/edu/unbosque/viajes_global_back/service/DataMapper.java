@@ -84,8 +84,6 @@ public class DataMapper {
         return new BookingDTO(
                 entity.getId_booking(),
                 entity.getClientEntity(),
-                entity.getId_client(),
-                entity.getId_package(),
                 entity.getBooking_date(),
                 entity.getBooking_status(),
                 entity.getName(),
@@ -100,8 +98,6 @@ public class DataMapper {
         return new BookingEntity(
                 dto.getId_booking(),
                 dto.getClientEntity(),
-                dto.getId_client(),
-                dto.getId_package(),
                 dto.getBooking_date(),
                 dto.getBooking_status(),
                 dto.getName(),

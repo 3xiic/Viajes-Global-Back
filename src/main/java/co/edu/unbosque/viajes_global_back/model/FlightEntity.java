@@ -29,7 +29,7 @@ public class FlightEntity {
     private int stock;
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_flight", referencedColumnName = "id_flight")
+    @JoinColumn(name = "id_flight", referencedColumnName = "id_flight", insertable = false, updatable = false)
     private PackageEntity packageEntity;
 
     public FlightEntity() {

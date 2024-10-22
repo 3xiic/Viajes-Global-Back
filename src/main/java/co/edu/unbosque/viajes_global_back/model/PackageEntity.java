@@ -17,7 +17,9 @@ public class PackageEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id_package;
+	@Column(name = "id_hotel", unique = true)
 	private int id_hotel;
+	@Column(name = "id_flight", unique = true)
 	private int id_flight;
 	private int id_activity;
 	private int price;

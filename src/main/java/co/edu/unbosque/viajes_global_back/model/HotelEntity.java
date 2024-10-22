@@ -27,8 +27,10 @@ public class HotelEntity {
 	private int stock;
 	@JsonBackReference
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_hotel", referencedColumnName = "id_hotel")
+	@JoinColumn(name = "id_hotel", referencedColumnName = "id_hotel", insertable = false, updatable = false)
 	private PackageEntity packageEntity;
+
+
 
 	public HotelEntity() {
 		// TODO Auto-generated constructor stub

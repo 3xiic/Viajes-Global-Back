@@ -24,7 +24,7 @@ public class ActivityEntity {
     private int stock;
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_activity", referencedColumnName = "id_activity")
+    @JoinColumn(name = "package_id", referencedColumnName = "id_package", insertable = false, updatable = false)
     private PackageEntity packageEntity;
 
 
