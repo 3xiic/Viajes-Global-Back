@@ -2,16 +2,16 @@ package co.edu.unbosque.viajes_global_back.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import co.edu.unbosque.viajes_global_back.repository.HotelRepository;
+import co.edu.unbosque.viajes_global_back.repository.ActivityRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class HotelService {
+public class ActivityService {
 
 	@Autowired
-	private HotelRepository hotelRepository;
+	private ActivityRepository activityRepository;
 	
-	public HotelService() {
+	public ActivityService() {
 		// TODO Auto-generated constructor stub
 	}
 	

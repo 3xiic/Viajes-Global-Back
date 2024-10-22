@@ -1,41 +1,37 @@
 package co.edu.unbosque.viajes_global_back.model;
 
-
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.json.bind.Jsonb;
 import lombok.Getter;
 import lombok.Setter;
 @Getter
 @Setter
-public class HotelDTO {
+public class ActivityDTO {
 
-
-    private int id_hotel;
+    private int id_activity;
     private String name;
-    private String address;
-    private String city;
-    private String country;
-    private int night_price;
-    private String images;
     private String description;
+    private int price;
+    private String location;
+    private String category;
+    private String images;
     private int assessment;
     private int stock;
     @JsonBackReference
     private PackageEntity packageEntity;
 
-    public HotelDTO() {
+    public ActivityDTO() {
         // TODO Auto-generated constructor stub
     }
 
-    public HotelDTO(int id_hotel, String name, String address, String city, String country, int night_price, String images, String description, int assessment, int stock, PackageEntity packageEntity) {
-        this.id_hotel = id_hotel;
+    public ActivityDTO(int id_activity, String name, String description, int price, String location, String category, String images, int assessment, int stock, PackageEntity packageEntity) {
+        this.id_activity = id_activity;
         this.name = name;
-        this.address = address;
-        this.city = city;
-        this.country = country;
-        this.night_price = night_price;
-        this.images = images;
         this.description = description;
+        this.price = price;
+        this.location = location;
+        this.category = category;
+        this.images = images;
         this.assessment = assessment;
         this.stock = stock;
         this.packageEntity = packageEntity;
